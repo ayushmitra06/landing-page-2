@@ -194,7 +194,7 @@ a {
   }
   .logos img {
     margin: 0 15px;
-    width: 35px;
+    width: 60px;
   }
 }
 
@@ -220,6 +220,9 @@ a {
       text-align: center;
       flex-direction: row;
       flex-wrap: wrap;
+    }
+    .hero img{
+      width: 400px;
     }
   
     .hero-left {
@@ -249,7 +252,7 @@ a {
     }
   
     .logos img {
-      width: 50px;
+      width: 30px;
     }
   
     .navbar-toggler {
