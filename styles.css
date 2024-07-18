@@ -13,6 +13,9 @@ body {
 header {
   border-bottom: 1px solid #ddd;
   background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar {
@@ -39,12 +42,42 @@ header {
   align-items: center;
   flex-grow: 1;
 }
-
 .navbar-nav {
   list-style: none;
   padding: 0;
   display: flex;
   margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 15px;
+  position: relative; /* Needed for the pseudo-element */
+  transition: color 0.3s; /* Smooth transition for text color change */
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #006ada;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover {
+  color: #006ada; /* Optional: Change text color on hover */
+}
+
+.nav-link-underline:hover::after {
+  width: 100%;
+  left: 0;
+  background: #006ada; /* Blue underline color */
 }
 
 .navbar-nav.right {
@@ -63,12 +96,14 @@ header {
   padding: 10px 15px;
 }
 
+
 a {
   text-decoration: none;
 }
 
 .btn {
   padding: 10px 20px;
+  margin: 6px;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -81,9 +116,18 @@ a {
   border: 1px solid #006ada;
 }
 
+.btn-outline:hover {
+  background-color: #006ada;
+  color: #fff;
+}
+
 .btn-warning {
   color: #212529;
   background-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
 }
 
 .container {
@@ -110,8 +154,8 @@ a {
 .hero-left {
   font-size: 25px;
   text-align: left;
-  margin: 15px;
-  padding: 55px;
+  margin: 25px;
+  padding: 40px;
 }
 
 .image-container {
@@ -131,6 +175,7 @@ a {
   padding: 20px;
   text-align: center;
   width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .card-title {
