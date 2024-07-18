@@ -181,15 +181,20 @@ a {
     flex-wrap: wrap;
   }
   .card {
-    width: 80%;
+    width: 70%;
     margin: 10px auto;
   }
 
   .cards {
     flex-direction: column;
+    margin: 5px;
   }
   .navbar-toggler {
     display: block;
+  }
+  .logos img {
+    margin: 0 15px;
+    width: 35px;
   }
 }
 
