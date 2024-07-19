@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+    .hero {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 100px;
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 400px;
+    }
+
+    .card {
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 2500px;
+      padding: 20px;
+      background-image: linear-gradient(#88d1ff, #ffffff);
+    }
+  </style>
+    </style>
+  </head>
     <script
       src="https://kit.fontawesome.com/cec6428d0f.js"
       crossorigin="anonymous"
@@ -12,96 +42,103 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/logo.svg" alt="Logo" />
-        </a>
-        <div class="navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link nav-link-underline" href="#">Product</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-underline" href="#">Use Cases</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-underline" href="#">Learn</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-underline" href="#">About Us</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-underline" href="#">Pricing</a></li>
-          </ul>
-          <ul class="navbar-nav right">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <li class="nav-item">
-              <i class="fa-solid fa-user"></i>
-              <a class="nav-link" href="#">Sign In</a>
-            </li>
-            <li class="nav-item">
-              <i class="fa-solid fa-comments"></i>
-              <a class="nav-link" href="#">Contact Sales</a>
-            </li>
-            <li class="nav-item btns">
-              <button class="btn btn-outline" type="button">Watch Demo</button>
-            </li>
-            <li class="nav-item btns">
-              <button class="btn btn-warning" type="button">Try Free</button>
-            </li>
-            <button class="navbar-toggler" aria-label="">☰</button>
-          </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./assets/logo.svg" alt="Logo" width="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Use Cases</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-user"></i> Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-comments"></i> Contact Sales</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-primary" type="button">Watch Demo</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-warning" type="button">Try Free</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
-
+  
     <main>
       <div class="container">
-        <div class="hero">
-          <div class="hero-left">
+        <div class="row align-items-center hero">
+          <div class="col-md-6 text-md-start">
             <h1>Put data to work and help everyone multiply their impact.</h1>
             <p class="lead">
-              Move from basic charts and graphs to data experiences that fuel
-              "Aha!" insights and action in the moments that matter.
+              Move from basic charts and graphs to data experiences that fuel "Aha!" insights and action in the moments that matter.
             </p>
             <button class="btn btn-warning">Try Free</button>
-            <button class="btn btn-outline">Watch Demo</button>
+            <button class="btn btn-outline-primary">Watch Demo</button>
           </div>
-          <div class="image-container">
-            <img src="./assets/hero.webp" alt="Data Visualization" />
-          </div>
-        </div>
-
-        <div class="cards">
-          <div class="card">
-            <h5 class="card-title">Business Apps</h5>
-            <p class="card-text">
-              Make better, faster decisions using low-code and pro-code apps to
-              automate business insights.
-            </p>
-            <a href="#" class="btn btn-outline-primary card-btn">Discover Apps</a>
-          </div>
-          <div class="card">
-            <h5 class="card-title">BI and Analytics</h5>
-            <p class="card-text">
-              Use intuitive dashboards, reporting, and AI-generated insights to
-              see what's going on in your business and make the next right move.
-            </p>
-            <a href="#" class="btn btn-outline-primary card-btn">See BI & Analytics</a>
-          </div>
-          <div class="card">
-            <h5 class="card-title">Data Foundation</h5>
-            <p class="card-text">
-              Build data experiences on a secure, flexible foundation that can
-              integrate real-time data from anywhere.
-            </p>
-            <a href="#" class="btn btn-outline-primary card-btn">Explore Foundation</a>
+          <div class="col-md-6 text-center image-container">
+            <img src="./assets/hero.webp" alt="Data Visualization">
           </div>
         </div>
-
-        <div class="trusted-by">
+  
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Business Apps</h5>
+                <p class="card-text">Make better, faster decisions using low-code and pro-code apps to automate business insights.</p>
+                <a href="#" class="btn btn-outline-primary">Discover Apps</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">BI and Analytics</h5>
+                <p class="card-text">Use intuitive dashboards, reporting, and AI-generated insights to see what's going on in your business and make the next right move.</p>
+                <a href="#" class="btn btn-outline-primary">See BI & Analytics</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Data Foundation</h5>
+                <p class="card-text">Build data experiences on a secure, flexible foundation that can integrate real-time data from anywhere.</p>
+                <a href="#" class="btn btn-outline-primary">Explore Foundation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="trusted-by mt-5 text-center">
           <h5>Trusted By</h5>
-          <div class="logos">
-            <img src="./assets/unilever.svg" alt="Unilever" />
-            <img src="./assets/ebay.svg" alt="eBay" />
-            <img src="./assets/cisco.svg" alt="Cisco" />
-            <img src="./assets/nba.svg" alt="NBA" />
-            <img src="./assets/taylormade.svg" alt="TaylorMade" />
-            <img src="./assets/emerson.svg" alt="Emerson" />
+          <div class="d-flex justify-content-around align-items-center flex-wrap mt-3">
+            <img src="./assets/unilever.svg" alt="" class="m-2" width="65">
+            <img src="./assets/ebay.svg" alt="" class="m-2" width="65">
+            <img src="./assets/cisco.svg" alt="" class="m-2" width="65">
+            <img src="./assets/nba.svg" alt="" class="m-2" width="35">
+            <img src="./assets/taylormade.svg" alt="" class="m-2" width="65">
+            <img src="./assets/emerson.svg" alt="" class="m-2" width="65">
           </div>
         </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
