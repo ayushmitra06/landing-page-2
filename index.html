@@ -4,17 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-    .hero {
-      margin-top: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 50px 100px;
-      text-align: center;
-    }
 
     .image-container img {
       max-width: 400px;
@@ -27,13 +19,12 @@
       transform: scale(1.05);
     }
 
-    .container {
-      max-width: 2500px;
+    /* .container {
+      width: 100%;
       padding: 20px;
       background-image: linear-gradient(#88d1ff, #ffffff);
-    }
+    } */
   </style>
-    </style>
   </head>
     <script
       src="https://kit.fontawesome.com/cec6428d0f.js"
@@ -42,7 +33,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom container">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="./assets/logo.svg" alt="Logo" width="50">
@@ -81,18 +72,23 @@
     </header>
   
     <main>
-      <div class="container">
-        <div class="row align-items-center hero">
+      <div style="background-image: linear-gradient(#88d1ff, #ffffff)" class="container">
+        <div class="container">
+          <div class="row align-items-center">
           <div class="col-md-6 text-md-start text-center">
             <h1>Put data to work and help everyone multiply their impact.</h1>
             <p>Move from basic charts and graphs to data experiences that fuel "Aha!" insights and action in the moments that matter.</p>
             <button class="btn btn-warning">Try Free</button>
             <button class="btn btn-outline-primary ms-2">Watch Demo</button>
           </div>
-          <div class="col-md-6 text-center image-container">
-            <img src="./assets/hero.webp" alt="Data Visualization">
+          <div class="col-md-6 text-center img-fluid mt-3">
+            <img class="img-fluid" src="./assets/hero.webp" alt="">
           </div>
         </div>
+        </div>
+        
+        
+        
   
         <div class="row mt-5">
           <div class="col-md-4">
